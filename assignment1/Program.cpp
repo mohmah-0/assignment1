@@ -179,8 +179,8 @@ void te()
 {
 	char firstname[20];
 
-	printf("what is your name? \n");
-	scanf("%s", firstname);
+	printf_s("what is your name? \n");
+	scanf_s("%s", firstname);
 	printf_s("%s", firstname);
 
 }
