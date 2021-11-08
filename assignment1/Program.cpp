@@ -12,7 +12,7 @@ void te();
 
 int main()
 {
-	task5();
+	te();
 	return 0;
 }
 
@@ -121,7 +121,7 @@ void task4()
 
 void task5()
 {
-
+	/*
 	bool married;
 	char name[20], address[20];
 	string gender_in_string, married_in_string, name_in_string, address_in_string;
@@ -171,12 +171,18 @@ void task5()
 	scanf_s("%f", &height);
 
 	printf_s("\n\nok here is the summary:\nyour name is : %s\nand you are %d years old\nyou are a %s\nyour address is : %s\nyou are %s\nand you are %f meter high\n", name_in_string, age, gender_in_string, address_in_string, married_in_string, height);
-
+	*/
 
 }
 
 void te()
 {
+	char firstname[20];
+
+	printf("what is your name? \n");
+	scanf("%s", firstname);
+	printf_s("%s", firstname);
+
 }
 //varför moste scanf_s ha den tredie argument?
 // this is so conterintuetive pls help
