@@ -177,7 +177,7 @@ void task5()
 
 void te()
 {
-	char firstname[20];
+	string firstname;
 
 	printf_s("what is your name? \n");
 	scanf_s("%s", firstname);
