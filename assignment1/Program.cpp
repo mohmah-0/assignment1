@@ -1,3 +1,4 @@
+//#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
 
@@ -177,11 +178,13 @@ void task5()
 
 void te()
 {
-	string firstname;
+	char firstname[20];
 
-	printf_s("what is your name? \n");
-	scanf_s("%s", firstname);
+	printf("what is your name? \n");
+	scanf_s("%s", firstname, 20);
 	printf_s("%s", firstname);
+	//scanf("%s", firstname);
+	//printf("%s", firstname);
 
 }
 //varför moste scanf_s ha den tredie argument?
