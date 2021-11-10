@@ -1,6 +1,8 @@
 //#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
+#include <vector>
+#include <list>
 
 using namespace std;
 
@@ -9,11 +11,13 @@ void task3_2();
 void task3_3();
 void task4();
 void task5();
+void task6();
+void task7();
 void te();
 
 int main()
 {
-	te();
+	task6();
 	return 0;
 }
 
@@ -122,25 +126,25 @@ void task4()
 
 void task5()
 {
-	/*
+	
 	bool married;
 	char name[20], address[20];
 	string gender_in_string, married_in_string, name_in_string, address_in_string;
-	char gender;
+	char gender[1];
 	int age;
 	float height;
 
 
 	printf_s("Whats your name?: ");
-	scanf_s("%s", &name, sizeof(name));
+	scanf_s("%s", name, 20);
 	printf_s("\n\nwhats you age?: ");
 	scanf_s("%d", &age);
 	printf_s("\n\nWhats your gender? (\"m\" for male/\"f\" for female): ");
-	scanf_s("%s", &gender, 1);//kolla denna senare
+	scanf_s("%s", gender, 1);//kolla denna senare
 
 
 
-	if (gender == 'm')
+	if (strcmp(gender,"m"))
 	{
 		gender_in_string = "male";
 	}
@@ -150,12 +154,12 @@ void task5()
 	}
 
 	printf_s("\n\nWhats your address?: ");
-	scanf_s("%s", &address, sizeof(address));
+	scanf_s("%s", address, 20);
 
 	printf_s("\n\nare you married? (\"yes\" for yes and \"no\" for no)");
 	char temp[20];
-	scanf_s("%s", &temp, 20);
-	if (temp == "yes")
+	scanf_s("%s", temp, 20);
+	if (strcmp(temp, "yes") == 0)
 	{
 		married = true;
 		married_in_string = "married";
@@ -165,26 +169,71 @@ void task5()
 		married = false;
 		married_in_string = "not married";
 	}
-	name_in_string = string(name);
-	address_in_string = string(address);
 
 	printf_s("\n\n what's your height? (answer in meter): ");
 	scanf_s("%f", &height);
 
-	printf_s("\n\nok here is the summary:\nyour name is : %s\nand you are %d years old\nyou are a %s\nyour address is : %s\nyou are %s\nand you are %f meter high\n", name_in_string, age, gender_in_string, address_in_string, married_in_string, height);
-	*/
+	printf_s("\n\nok here is the summary:\nyour name is : %s\nand you are %d years old\nyou are a %s\nyour address is : %s\nyou are %s\nand you are %.2f meter high\n", name, age, gender_in_string.c_str(), address, married_in_string.c_str(), height);
+	
 
 }
+
+
+void task6()
+{
+	int x = 0;
+	cout << "how many primes?: ";
+	cin >> x;
+
+	vector<int> ans;
+	
+
+	int i = 2;
+	bool prime;
+
+	while (ans.size() < x)
+	{
+		prime = true;
+		for (int k = 2; k < i; k++)
+		{
+			if (i % k == 0)
+			{
+				prime = false;
+			}
+		}
+
+		if (prime == true)
+		{
+			ans.push_back(i);
+		}
+		i++;
+	}
+
+	for (int n = 0; n < ans.size(); n++)
+	{
+		cout << ans.at(n) << " ";
+	}
+
+}
+
+
+void task7()
+{
+	int x;
+	cout << "give a number: ";
+	cin >> x;
+	
+	if (x < 0)
+}
+
 
 void te()
 {
 	char firstname[20];
 
-	printf("what is your name? \n");
+	printf_s("what is your name? \n");
 	scanf_s("%s", firstname, 20);
 	printf_s("%s", firstname);
-	//scanf("%s", firstname);
-	//printf("%s", firstname);
 
 }
 //varför moste scanf_s ha den tredie argument?
