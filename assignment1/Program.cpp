@@ -13,11 +13,12 @@ void task4();
 void task5();
 void task6();
 void task7();
-void te();
+void task8();
+void task9();
 
 int main()
 {
-	task6();
+	task9();// chose what task you want to check here.
 	return 0;
 }
 
@@ -224,17 +225,64 @@ void task7()
 	cin >> x;
 	
 	if (x < 0)
+	{
+		cout << "Error ";
+	}
+	else
+	{
+		int i = x;
+		while (i > 0)
+		{
+			cout << i;
+			i--;
+		}
+		while(i <= x)
+		{
+			cout << i;
+			i++;
+		}
+
+	}
 }
 
 
-void te()
+void task8()
 {
-	char firstname[20];
+	char t[1];
 
-	printf_s("what is your name? \n");
-	scanf_s("%s", firstname, 20);
-	printf_s("%s", firstname);
+	cout << "say any letter (a - z): ";
+	cin >> t[0];
 
+	if (isdigit(t[0]))
+	{
+		int c = atoi(t);
+
+		for (int i = 1; i <= c; i++)
+		{
+			for (int k = 1; k <= i; k++)
+			{
+				cout << i;
+			}
+			cout << "\n";
+		}
+
+	}
+	else
+	{
+		t[0] = toupper(t[0]);
+		for (int i = 65; i <= t[0]; i++)
+		{
+			for (int k = 0; k <= (i - 65); k++)
+			{
+				cout << char(i);
+			}
+			cout << "\n";
+		}
+	}
+	
 }
-//varför moste scanf_s ha den tredie argument?
-// this is so conterintuetive pls help
+
+void task9()
+{
+	cout << "My reflection to this task is that i learned how hard c++ realy is and i would prepare more time for the tasks than i usually would. \nMany of the task could be so easly accomplished if c++ wasnt so bad att orginasing stuff like other languages. \nIn addition to that, i learned how hard it is to find information you need to solve the tasks\nand that made me realize that i need to be better prepared to ask questions in lectures.\nI found that i hate c++ not because its hard, but because its unnessecary anoying to deal with\nHope it gets better later on, maybe when i build up my own liblary";
+}
