@@ -1,4 +1,4 @@
-//#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
 #include <vector>
@@ -6,6 +6,7 @@
 
 using namespace std;
 
+//here you can see a list of all the tasks
 void task3_1();
 void task3_2();
 void task3_3();
@@ -18,7 +19,7 @@ void task9();
 
 int main()
 {
-	task9();// chose what task you want to check here.
+	task3_1();//chose what task you want to try here.
 	return 0;
 }
 
@@ -141,7 +142,7 @@ void task5()
 	printf_s("\n\nwhats you age?: ");
 	scanf_s("%d", &age);
 	printf_s("\n\nWhats your gender? (\"m\" for male/\"f\" for female): ");
-	scanf_s("%s", gender, 1);//kolla denna senare
+	scanf_s("%s", gender, 1);
 
 
 
@@ -192,7 +193,7 @@ void task6()
 	int i = 2;
 	bool prime;
 
-	while (ans.size() < x)
+	while ((int)ans.size() < x)
 	{
 		prime = true;
 		for (int k = 2; k < i; k++)
@@ -210,7 +211,7 @@ void task6()
 		i++;
 	}
 
-	for (int n = 0; n < ans.size(); n++)
+	for (int n = 0; n < (int)ans.size(); n++)
 	{
 		cout << ans.at(n) << " ";
 	}
@@ -250,7 +251,7 @@ void task8()
 {
 	char t[1];
 
-	cout << "say any letter (a - z): ";
+	cout << "say any number (1-9) or letter (a - z): ";
 	cin >> t[0];
 
 	if (isdigit(t[0]))
